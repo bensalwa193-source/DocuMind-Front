@@ -7,7 +7,7 @@ export const useSettings = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [models, setModels] = useState<string[]>([]);
   const { user, getAuthParams } = useAuth();
-  const API = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8080';
+  const API = (import.meta as any).env?.VITE_API_URL || 'https://docmind-production.up.railway.app';
 
   const loadSettings = async () => {
     if (!user) return;
