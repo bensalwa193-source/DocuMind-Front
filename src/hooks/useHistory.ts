@@ -6,7 +6,7 @@ export const useHistory = () => {
   const [history, setHistory] = useState<HistoryEntity[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { user, getAuthParams } = useAuth();
-  const API = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8080';
+  const API = (import.meta as any).env?.VITE_API_URL || 'https://docmind-production.up.railway.app';
 
   const loadHistory = async () => {
     if (!user) return;
