@@ -4,7 +4,7 @@ import { User } from '../types';
 export const useAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const API = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8080';
+  const API = (import.meta as any).env?.VITE_API_URL || 'https://docmind-production.up.railway.app';
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
